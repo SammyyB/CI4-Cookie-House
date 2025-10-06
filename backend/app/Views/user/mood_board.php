@@ -175,8 +175,8 @@
         <!-- Logos -->
         <h2>Logos</h2>
         <div class="logos">
-            <img src="assets/logo.png" alt="Golden Crumbs Circle Logo">
-            <img src="assets/logo.png" alt="Golden Crumbs Square Logo">
+            <img src="/assets/images/logo-circle.png" alt="Golden Crumbs Circle Logo">
+            <img src="/assets/images/logo-square.png" alt="Golden Crumbs Square Logo">
         </div>
     </main>
 
