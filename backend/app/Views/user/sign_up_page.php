@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,82 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .palette { display:flex; gap:15px; margin:20px 0; }
-    .color { width:80px; height:80px; border-radius:8px; text-align:center; line-height:80px; color:#fff; font-weight:bold; }
-    .typography { margin:20px 0; }
-    .buttons { display:flex; gap:10px; margin:20px 0; }
-    .buttons button { padding:10px 20px; border:none; border-radius:6px; cursor:pointer; font-weight:bold; }
-    .primary { background:#5c3d2e; color:white; }
-    .secondary { background:#e2c2a2; color:#5c3d2e; }
-    .border { border:2px solid #5c3d2e; background:white; color:#5c3d2e; }
-    .disabled { background:#ccc; color:#777; cursor:not-allowed; }
-    .card { background:#f4e1d2; padding:20px; border-radius:8px; width:250px; margin:20px auto; text-align:center; }
-    .logos img { height:80px; margin:10px; border-radius:8px; }
+    .palette {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .color {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 80px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .typography {
+      margin: 20px 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #5c3d2e;
+      color: white;
+    }
+
+    .secondary {
+      background: #e2c2a2;
+      color: #5c3d2e;
+    }
+
+    .border {
+      border: 2px solid #5c3d2e;
+      background: white;
+      color: #5c3d2e;
+    }
+
+    .disabled {
+      background: #ccc;
+      color: #777;
+      cursor: not-allowed;
+    }
+
+    .card {
+      background: #f4e1d2;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .logos img {
+      height: 80px;
+      margin: 10px;
+      border-radius: 8px;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="/images/logo.png" alt="Golden Crumbs Logo">
+    <img src="/assets/logo.png" alt="Golden Crumbs Logo">
     <span>Golden Crumbs Cookie House 🍪</span>
   </header>
 
@@ -66,14 +127,15 @@
 
     <h2>🏷 Logos</h2>
     <div class="logos">
-      <img src="/images/logo.png" alt="Golden Crumbs Circle Logo">
-      <img src="/images/logo.png" style="border-radius:0;" alt="Golden Crumbs Square Logo">
+      <img src="/assets/logo.png" alt="Golden Crumbs Circle Logo">
+      <img src="/assets/logo.png" style="border-radius:0;" alt="Golden Crumbs Square Logo">
     </div>
   </main>
 
   <footer>
-    <img src="/images/logo.png" alt="Golden Crumbs Logo">
+    <img src="/assets/logo.png" alt="Golden Crumbs Logo">
     <span>© 2025 Golden Crumbs Cookie House | All rights reserved.</span>
   </footer>
 </body>
+
 </html>

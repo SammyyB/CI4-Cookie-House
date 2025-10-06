@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
       color: #333;
     }
 
-    header, footer {
+    header,
+    footer {
       background: #6B4226;
       color: white;
       text-align: center;
@@ -39,6 +41,7 @@
       gap: 15px;
       margin-top: 15px;
     }
+
     .color {
       width: 100px;
       height: 100px;
@@ -55,10 +58,12 @@
       gap: 40px;
       margin-top: 15px;
     }
+
     .font1 {
       font-family: 'Georgia', serif;
       font-size: 20px;
     }
+
     .font2 {
       font-family: 'Courier New', monospace;
       font-size: 20px;
@@ -70,27 +75,32 @@
       gap: 15px;
       margin-top: 15px;
     }
+
     button {
       padding: 10px 20px;
       font-size: 16px;
       border-radius: 6px;
       cursor: pointer;
     }
+
     .primary {
       background: #6B4226;
       color: white;
       border: none;
     }
+
     .secondary {
       background: #E9C46A;
       color: black;
       border: none;
     }
+
     .bordered {
       background: white;
       border: 2px solid #6B4226;
       color: #6B4226;
     }
+
     .disabled {
       background: #ccc;
       border: none;
@@ -106,7 +116,7 @@
       padding: 20px;
       width: 250px;
       background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     /* Logos */
@@ -116,6 +126,7 @@
       margin-top: 15px;
       align-items: center;
     }
+
     .logos img {
       width: 100px;
       height: 100px;
@@ -123,6 +134,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>🍪 Golden Crumbs Cookie House Mood Board</h1>
@@ -163,8 +175,8 @@
     <!-- Logos -->
     <h2>Logos</h2>
     <div class="logos">
-      <img src="/assets/images/logo-circle.png" alt="Golden Crumbs Circle Logo">
-      <img src="/assets/images/logo-square.png" alt="Golden Crumbs Square Logo">
+      <img src="/assets/logo.png" alt="Golden Crumbs Circle Logo">
+      <img src="/assets/logo.png" alt="Golden Crumbs Square Logo">
     </div>
   </main>
 
@@ -172,4 +184,5 @@
     <p>&copy; 2025 Golden Crumbs Cookie House. All rights reserved.</p>
   </footer>
 </body>
+
 </html>

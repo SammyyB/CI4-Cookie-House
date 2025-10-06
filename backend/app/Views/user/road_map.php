@@ -85,7 +85,7 @@
 <body>
 
   <header>
-    <img src="/images/logo.png" alt="Golden Crumbs Logo">
+    <img src="/assets/logo.png" alt="Golden Crumbs Logo">
     <span>Golden Crumbs Cookie House 🍪</span>
   </header>
 
@@ -132,7 +132,7 @@
   </main>
 
   <footer>
-    <img src="/images/logo.png" alt="Golden Crumbs Logo">
+    <img src="/assets/logo.png" alt="Golden Crumbs Logo">
     <span>© 2025 Golden Crumbs Cookie House | All rights reserved.</span>
   </footer>
 
