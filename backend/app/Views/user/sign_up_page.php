@@ -83,7 +83,7 @@
 
 <body>
   <header>
-    <img src="/assets/logo.png" alt="Golden Crumbs Logo">
+    <img src="/images/logo.png" alt="Golden Crumbs Logo">
     <span>Golden Crumbs Cookie House 🍪</span>
   </header>
 
@@ -127,13 +127,13 @@
 
     <h2>🏷 Logos</h2>
     <div class="logos">
-      <img src="/assets/logo.png" alt="Golden Crumbs Circle Logo">
-      <img src="/assets/logo.png" style="border-radius:0;" alt="Golden Crumbs Square Logo">
+      <img src="/images/logo.png" alt="Golden Crumbs Circle Logo">
+      <img src="/images/logo.png" style="border-radius:0;" alt="Golden Crumbs Square Logo">
     </div>
   </main>
 
   <footer>
-    <img src="/assets/logo.png" alt="Golden Crumbs Logo">
+    <img src="/images/logo.png" alt="Golden Crumbs Logo">
     <span>© 2025 Golden Crumbs Cookie House | All rights reserved.</span>
   </footer>
 </body>

@@ -12,7 +12,7 @@
 <body>
     <header>
         <div style="display:flex;align-items:center;gap:15px;justify-content:center;">
-            <img src="/assets/logo.png" alt="Golden Crumbs Cookie House Logo" style="height:60px;width:60px;border-radius:50%;">
+            <img src="assets/logo.png" alt="Golden Crumbs Cookie House Logo" style="height:60px;width:60px;border-radius:50%;">
             <span style="font-family:'Pacifico',cursive;font-size:1.8rem;">Golden Crumbs Cookie House 🍪</span>
         </div>
     </header>
@@ -55,7 +55,7 @@
 
     <footer>
         <div style="display:flex;align-items:center;justify-content:center;gap:10px;">
-            <img src="/assets/logo.png" alt="Golden Crumbs Logo" style="height:40px;width:40px;border-radius:50%;">
+            <img src="assets/logo.png" alt="Golden Crumbs Logo" style="height:40px;width:40px;border-radius:50%;">
             <span>© 2025 Golden Crumbs Cookie House | <a href="#">About</a> | <a href="#">Contact</a> | <a href="#">Privacy</a></span>
         </div>
     </footer>
