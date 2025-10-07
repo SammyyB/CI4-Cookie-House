@@ -3,11 +3,12 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use Config\View;
 
 class Users extends BaseController
 {
-    public function login(): string
+    public function index(): string
     {
-        return view('user/login_page');
+        return view('user/landing_page');
     }
 }
