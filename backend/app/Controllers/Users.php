@@ -22,7 +22,6 @@ class Users extends BaseController
         return view('user/sign_up_page');
     }
 
-
     public function moodboard(): string
     {
         return view('user/mood_board');
