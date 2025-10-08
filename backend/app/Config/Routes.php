@@ -2,5 +2,8 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-$routes->get('/', 'Users::index');
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Home::index');
 $routes->get('/login', 'Users::login');
