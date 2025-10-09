@@ -122,15 +122,7 @@
 </head>
 
 <body class="login-page">
-    <header style="background:#6B4226; padding:25px 0; text-align:center; color:white; box-shadow:0 3px 6px rgba(0,0,0,0.2);">
-        <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
-            <img src="assets/logo.png" alt="Golden Crumbs Cookie House Logo" style="height:80px;width:80px;border-radius:50%;border:3px solid #E9C46A;">
-            <div>
-                <h1 style="font-family:'Pacifico',cursive;font-size:2.5rem;margin:0;">Golden Crumbs Cookie House 🍪</h1>
-                <p style="font-family:'Montserrat',sans-serif;font-size:1rem;margin:5px 0 0 0;letter-spacing:1px;">Freshly Baked Happiness Every Day</p>
-            </div>
-        </div>
-    </header>
+    <?= view('components/header') ?>
 
     <nav>
         <a href="/">Home</a>
@@ -149,19 +141,16 @@
                 <input type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
+            <p style="margin-top:15px; font-size:0.9rem; color:#5c3d2e;">
+                Don't have an account?
+                <a href="/signup" style="color:#E9C46A; text-decoration:none; font-weight:bold;">Sign Up</a>
+            </p>
         </div>
     </div>
 
-    <footer>
-        <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
-            <img src="assets/logo.png" alt="Golden Crumbs Logo" style="height:40px;width:40px;border-radius:50%;">
-            <span>© 2025 Golden Crumbs Cookie House |
-                <a href="#">About</a> |
-                <a href="#">Contact</a> |
-                <a href="#">Privacy</a>
-            </span>
-        </div>
-    </footer>
+
+    <?= view('components/footer') ?>
+
 </body>
 
 </html>
