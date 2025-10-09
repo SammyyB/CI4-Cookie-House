@@ -9,56 +9,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
+        /* --- Signup Page Styles --- */
         body.signup-page {
             background: #fff8f0;
             color: #333;
             font-family: 'Montserrat', sans-serif;
             display: flex;
-            flex-direction: column;
+            flex-direction: columan;
             min-height: 100vh;
         }
 
-        .signup-wrapper {
+        /* Header */
+        body.signup-page header {
+            background: #5c3d2e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        body.signup-page header img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        body.signup-page header span {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            vertical-align: middle;
+        }
+
+        /* Signup Wrapper */
+        body.signup-page .signup-wrapper {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
         }
 
-        .signup-page .form-container {
-            background: #f4e1d2;
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        /* Form Container */
+        body.signup-page .form-container {
             width: 100%;
-            max-width: 420px;
-        }
-
-        .signup-page .form-container h2 {
-            text-align: center;
-            color: #5c3d2e;
-            margin-bottom: 20px;
-        }
-
-        .signup-page .name-group {
+            max-width: 400px;
+            padding: 25px;
+            background: #f4e1d2;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             display: flex;
-            gap: 10px;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .signup-page .name-group input {
-            flex: 1;
+        body.signup-page .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #5c3d2e;
         }
 
-        .signup-page .form-container input {
+        body.signup-page .form-container form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Input styling */
+        body.signup-page .form-container input {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border-radius: 6px;
             border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
         }
 
-        .signup-page .form-container button {
+        /* Name group (side-by-side fix) */
+        body.signup-page .name-group {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        body.signup-page .name-group input {
+            flex: 1;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        /* Centered Button */
+        body.signup-page .form-container button {
             width: 100%;
             padding: 10px;
             background: #5c3d2e;
@@ -67,14 +109,19 @@
             border-radius: 6px;
             font-size: 1rem;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .signup-page .form-container button:hover {
+        body.signup-page .form-container button:hover {
             background: #7a5543;
         }
 
-        .signup-page footer {
+        /* Footer */
+        body.signup-page footer {
             background: #5c3d2e;
             color: white;
             padding: 15px;
@@ -82,28 +129,20 @@
             margin-top: auto;
         }
 
-        .signup-page footer a {
-            color: #f5e3c8;
-            text-decoration: none;
-        }
-
-        .signup-page footer a:hover {
-            text-decoration: underline;
+        body.signup-page footer img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
         }
     </style>
+
 </head>
 
 <body class="signup-page">
-    <header style="background:#6B4226; padding:25px 0; text-align:center; color:white; box-shadow:0 3px 6px rgba(0,0,0,0.2);">
-        <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
-            <img src="assets/logo.png" alt="Golden Crumbs Cookie House Logo" style="height:80px;width:80px;border-radius:50%;border:3px solid #E9C46A;">
-            <div>
-                <h1 style="font-family:'Pacifico',cursive;font-size:2.5rem;margin:0;">Golden Crumbs Cookie House 🍪</h1>
-                <p style="font-family:'Montserrat',sans-serif;font-size:1rem;margin:5px 0 0 0;letter-spacing:1px;">Freshly Baked Happiness Every Day</p>
-            </div>
-        </div>
-    </header>
 
+    <?= view('components/header') ?>
     <nav>
         <a href="/">Home</a>
         <a href="/login">Login</a>
@@ -125,19 +164,16 @@
                 <input type="password" placeholder="Confirm Password" required>
                 <button type="submit">Sign Up</button>
             </form>
+            <p style="margin-top:15px; font-size:0.9rem; color:#5c3d2e;">
+                Already have an account?
+                <a href="/login" style="color:#E9C46A; text-decoration:none; font-weight:bold;">Login</a>
+            </p>
         </div>
     </div>
 
-    <footer>
-        <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
-            <img src="assets/logo.png" alt="Golden Crumbs Logo" style="height:40px;width:40px;border-radius:50%;">
-            <span>© 2025 Golden Crumbs Cookie House |
-                <a href="#">About</a> |
-                <a href="#">Contact</a> |
-                <a href="#">Privacy</a>
-            </span>
-        </div>
-    </footer>
+
+    <?= view('components/footer') ?>
+
 </body>
 
 </html>
