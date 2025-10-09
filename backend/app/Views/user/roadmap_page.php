@@ -22,7 +22,7 @@
         .roadmap-main {
             flex: 1;
             padding: 60px 20px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -34,41 +34,53 @@
             font-size: 2rem;
         }
 
-        .roadmap-cards {
+        .roadmap-container {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .roadmap-card {
             background: #fffefb;
             border: 1px solid #f5e3c8;
             border-radius: 16px;
             padding: 25px;
             box-shadow: 0 4px 10px rgba(76, 52, 35, 0.15);
             transition: all 0.3s ease;
-            margin-bottom: 25px;
         }
 
-        .roadmap-cards:hover {
+        .roadmap-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(76, 52, 35, 0.25);
         }
 
-        .roadmap-cards h2 {
+        .roadmap-card h2 {
             font-size: 1.3rem;
             color: #4A2E05;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
-        .roadmap-cards p {
+        .roadmap-card p {
             color: #5c3d2e;
             font-size: 0.95rem;
             line-height: 1.6;
+            margin-bottom: 10px;
         }
 
         .status {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 600;
             color: white;
             text-transform: uppercase;
+            margin-bottom: 10px;
+            min-width: 90px;
+            text-align: center;
         }
 
         .bg-green {
@@ -87,12 +99,9 @@
             background: #73397e;
         }
 
-        /* Planned - Blue */
-
         .priority {
             font-size: 0.85rem;
             color: #8B7E74;
-            margin-top: 10px;
             font-weight: 500;
         }
 
@@ -100,7 +109,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -119,7 +127,69 @@
 
     <main class="roadmap-main">
         <h1>System Road Map</h1>
-        <?= view('components/cards/roadmapcards') ?>
+
+        <?php
+        $roadmapItems = [
+            [
+                "title" => "User Management",
+                "description" => "Handles customer sign-ups, employee registration by admins, and secure access for both staff and customers. Includes profile viewing and account editing features.",
+                "status" => "Completed",
+                "priority" => "High",
+                "statusClass" => "bg-green"
+            ],
+            [
+                "title" => "Service Management",
+                "description" => "Enables the admin to add, update, or remove cookie flavors and combo sets. Keeps the online menu updated with new products, stock levels, and prices.",
+                "status" => "In Progress",
+                "priority" => "High",
+                "statusClass" => "bg-orange"
+            ],
+            [
+                "title" => "Order & Tracking System",
+                "description" => "Lets customers place cookie orders and track them in real-time through stages: Pending, Baking, Ready, and Completed. Admins can update progress and handle cancellations.",
+                "status" => "In Progress",
+                "priority" => "High",
+                "statusClass" => "bg-orange"
+            ],
+            [
+                "title" => "Account Control & Deactivation",
+                "description" => "Allows both users and admins to update or deactivate accounts securely to ensure safe and managed user data handling.",
+                "status" => "Planned",
+                "priority" => "Medium",
+                "statusClass" => "bg-blue"
+            ],
+            [
+                "title" => "Cookie Tracking Analytics",
+                "description" => "Tracks and visualizes completed and ongoing cookie orders to help monitor workflow efficiency and popular cookie flavors.",
+                "status" => "Planned",
+                "priority" => "Medium",
+                "statusClass" => "bg-blue"
+            ],
+            [
+                "title" => "Feedback & Review Feature",
+                "description" => "Lets customers leave ratings and comments after receiving their cookies, giving admins insights for product improvements.",
+                "status" => "Backlog",
+                "priority" => "Low",
+                "statusClass" => "bg-purple"
+            ],
+        ];
+        ?>
+
+        <div class="roadmap-container">
+            <?php foreach ($roadmapItems as $item): ?>
+                <div class="roadmap-card">
+                    <div class="flex">
+                        <h2><?= htmlspecialchars($item['title']) ?></h2>
+                        <span class="status <?= htmlspecialchars($item['statusClass']) ?>">
+                            <?= htmlspecialchars($item['status']) ?>
+                        </span>
+                    </div>
+                    <p><?= htmlspecialchars($item['description']) ?></p>
+                    <p class="priority">Priority: <?= htmlspecialchars($item['priority']) ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
     </main>
 
     <?= view('components/footer') ?>
