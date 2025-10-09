@@ -9,7 +9,7 @@
         body.moodboard-page {
             all: unset;
             display: block !important;
-            font-family: 'Georgia', serif !important;
+            font-family: 'Montserrat', serif !important;
             margin: 0 !important;
             padding: 0 !important;
             background: #fffaf5 !important;
@@ -36,7 +36,18 @@
             border-bottom: 2px solid #ddd !important;
             padding-bottom: 8px !important;
             color: #6B4226 !important;
-            font-family: 'Georgia', serif !important;
+            font-family: 'pacifico', serif !important;
+            font-size: 30px !important;
+        }
+
+        body.moodboard-page nav a {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 600;
+            text-decoration: none;
+            color: #6B4226;
+            /* optional: your link color */
+            margin-right: 15px;
+            /* spacing between links */
         }
 
         /* Color Palette */
@@ -64,12 +75,12 @@
         }
 
         body.moodboard-page .font1 {
-            font-family: 'Georgia', serif !important;
+            font-family: 'Pacifico', serif !important;
             font-size: 20px !important;
         }
 
         body.moodboard-page .font2 {
-            font-family: 'Courier New', monospace !important;
+            font-family: 'Montserrat', monospace !important;
             font-size: 20px !important;
         }
 
@@ -129,17 +140,7 @@
 </head>
 
 <body class="moodboard-page">
-    <header style="background:#6B4226; padding:25px 0; text-align:center; color:white; box-shadow:0 3px 6px rgba(0,0,0,0.2);">
-        <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
-            <img src="assets/logo.png" alt="Golden Crumbs Cookie House Logo"
-                style="height:80px;width:80px;border-radius:50%;border:3px solid #E9C46A;">
-            <div>
-                <h1 style="font-family:'Pacifico',cursive;font-size:2.5rem;margin:0;">Golden Crumbs Cookie House 🍪</h1>
-                <p style="font-family:'Montserrat',sans-serif;font-size:1rem;margin:5px 0 0 0;letter-spacing:1px;">
-                    Freshly Baked Happiness Every Day</p>
-            </div>
-        </div>
-    </header>
+    <?= view('components/header') ?>
 
     <nav>
         <a href="/">Home</a>
@@ -168,23 +169,43 @@
             <p class="font2">Montserrat — Modern and clean, used for body text and navigation.</p>
         </div>
 
-        <h2>Buttons</h2>
-        <p>Buttons follow the cookie-inspired color scheme. The primary button highlights main actions, while the
-            secondary and bordered styles offer variety for different contexts. Disabled buttons maintain a neutral gray
-            tone.</p>
         <div class="buttons">
-            <button class="primary">Primary</button>
-            <button class="secondary">Secondary</button>
-            <button class="bordered">Bordered</button>
-            <button class="disabled" disabled>Disabled</button>
+            <?= view('components/buttons/primary_button', ['label' => 'Primary']) ?>
+            <?= view('components/buttons/secondary_button', ['label' => 'Secondary']) ?>
+            <?= view('components/buttons/border_button', ['label' => 'Bordered']) ?>
+            <?= view('components/buttons/disabled_button', ['label' => 'Disabled']) ?>
         </div>
 
-        <h2>Card Sample</h2>
+
+        <h2>Card Samples</h2>
         <p>Cards showcase featured items or products with a simple layout, rounded corners, and subtle shadows. They
             maintain the brand’s clean and inviting look.</p>
-        <div class="card">
-            <h3>Cookie Card</h3>
-            <p>A sample card layout highlighting one of our best sellers with a warm tone and soft presentation.</p>
+
+        <div class="card-grid" style="display:grid; gap:20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <?= view('components/cards/sample_card', [
+                'title' => 'Cookie Card',
+                'description' => 'A sample card layout highlighting one of our best sellers with a warm tone and soft presentation.'
+            ]) ?>
+
+            <?= view('components/cards/sample_card', [
+                'title' => 'Featured Product',
+                'description' => 'Showcasing our premium cookie selection with cozy and inviting design.'
+            ]) ?>
+
+            <?= view('components/cards/sample_card', [
+                'title' => 'Customer Highlight',
+                'description' => '“Our favorite cookie store — warm and delightful!”'
+            ]) ?>
+
+            <?= view('components/cards/sample_card', [
+                'title' => 'New Arrival',
+                'description' => 'Introducing a fresh batch of seasonal cookies to delight your taste buds.'
+            ]) ?>
+
+            <?= view('components/cards/sample_card', [
+                'title' => 'Best Seller',
+                'description' => 'The classic chocolate chip cookie that everyone loves.'
+            ]) ?>
         </div>
 
         <h2>Logos</h2>
@@ -196,17 +217,7 @@
         </div>
     </main>
 
-    <footer>
-        <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
-            <img src="assets/logo.png" alt="Golden Crumbs Logo"
-                style="height:40px;width:40px;border-radius:50%;">
-            <span>© 2025 Golden Crumbs Cookie House |
-                <a href="#">About</a> |
-                <a href="#">Contact</a> |
-                <a href="#">Privacy</a>
-            </span>
-        </div>
-    </footer>
+    <?= view('components/footer') ?>
 </body>
 
 </html>
