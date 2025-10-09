@@ -53,24 +53,31 @@ It demonstrates a modular approach to managing users, products, orders, and anal
 
 ---
 
-## Overview
+# Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+This template provides a **minimal CodeIgniter 4 project layout** for the Golden Crumbs system, with conventions for file organization, commit practices, and sample modules.  
 
 It is designed to be **easy to start with** and a **reference for adding new features**.
 
-* **Purpose**: a clean starting point for CI4 apps.
+* **Purpose**: a clean starting point for Golden Crumbs CI4 apps.  
 * **Audience**: developers who want a predictable structure and quick onboarding.
 
 ### Key Components
 
-These are **sample modules** included (or suggested) for learning how to add features:
+These are **modules/components** included in your system:
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| Component                 | Purpose                                                                                   | Notes                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Auth (Login/Signup)**   | Handles customer and admin login, registration, session and cookie management.            | Uses CI4 sessions + optional MySQL `users` table.                     |
+| **Product Management**    | CRUD operations for cookies, combos, and featured items.                                   | Includes best-seller highlights, images, and pricing.                 |
+| **Order & Tracking System** | Allows customers to place orders and track them in real-time.                             | Includes stages: Pending → Baking → Ready → Completed.                |
+| **Roadmap / Progress Cards** | Visualizes system features, planned modules, and progress stages.                         | Uses cards with color-coded statuses (Completed, In Progress, Planned).|
+| **Feedback & Reviews**    | Enables customers to leave ratings and comments.                                           | Helps admin monitor customer satisfaction.                             |
+| **CTAs & Hero Section**   | Encourages users to Login or Sign Up from the landing page.                                | Uses Golden Crumbs brand colors and fonts (Pacifico + Montserrat).     |
+| **UI Components**         | Reusable buttons, cards, and layouts for landing pages and dashboards.                     | Fragmented PHP views for consistency across pages.                     |
+| **Logo & Branding**       | Circle and square logos, color palette, and typography guidelines.                         | Pacifico font for headings/logos, Montserrat for body text.            |
+| **Scheduler / Admin Tools** | (Optional) Sample modules showing task scheduling or content updates.                     | Demonstrates extending system with new features and tables.           |
+
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
