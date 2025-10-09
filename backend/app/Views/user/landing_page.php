@@ -33,7 +33,30 @@
     ]) ?>
 
     <!-- Best Seller Cards -->
-    <?= view('components/cards/bestsellercards') ?>
+    <?php
+    $products = [
+        [
+            "title" => "Chocolate Chip Cookie",
+            "description" => "A timeless favorite — golden, chewy, and packed with rich chocolate chunks that melt in your mouth.",
+            "price" => 129,
+            "image" => "assets/choco-chip.png"
+        ],
+        [
+            "title" => "Oatmeal Raisin Cookie",
+            "description" => "Soft, spiced, and filled with plump raisins and hearty oats — the perfect cozy comfort treat.",
+            "price" => 119,
+            "image" => "assets/oatmeal.jpg"
+        ],
+        [
+            "title" => "Double Fudge Cookie",
+            "description" => "For the true chocolate lover — deeply rich, gooey, and irresistibly indulgent.",
+            "price" => 139,
+            "image" => "assets/fudge.png"
+        ]
+    ];
+    ?>
+
+    <?= view('components/cards/bestsellercards', ['products' => $products]) ?>
 
     <?= view('components/footer') ?>
 </body>
