@@ -14,12 +14,12 @@
     <?= view('components/header') ?>
 
     <!-- Navbar -->
-    <nav style="display:flex;justify-content:center;gap:25px;margin:20px 0;font-family:'Montserrat',sans-serif;">
-        <a href="/" style="text-decoration:none;color:#4A2E05;font-weight:600;">Home</a>
-        <a href="/login" style="text-decoration:none;color:#4A2E05;font-weight:600;">Login</a>
-        <a href="/signup" style="text-decoration:none;color:#4A2E05;font-weight:600;">Sign Up</a>
-        <a href="/moodboard" style="text-decoration:none;color:#4A2E05;font-weight:600;">Mood Board</a>
-        <a href="/roadmap" style="text-decoration:none;color:#4A2E05;font-weight:600;">Road Map</a>
+    <nav class="roadmap-nav">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+        <a href="/moodboard">Mood Board</a>
+        <a href="/roadmap">Road Map</a>
     </nav>
 
     <!-- CTA Section (Fragmented) -->
